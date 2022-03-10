@@ -1,22 +1,21 @@
-header{
+header {
 	background: #BBBBBB;
 	padding: 20px 0;
 }
 
-body{
+body {
 	font-family: 'Montserrat', sans-serif;
 }
 
 .caixa {
-	position: relative;
-	width: 940px;
-	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 nav {
-	position: absolute;
-	top: 110px;
-	right: 0;
+	display: flex;
 }
 
 nav li {
@@ -35,7 +34,7 @@ nav a {
 nav a:hover {
 	color: #C78C19;
 	text-decoration: underline;
-} 
+}
 
 .produtos {
 	width: 940px;
@@ -57,7 +56,7 @@ nav a:hover {
 
 .produtos li:hover {
 	border-color: #C78C19;
-	
+
 }
 
 .produtos li:active {
@@ -77,7 +76,7 @@ nav a:hover {
 	font-size: 18px;
 }
 
-.produto-preco{
+.produto-preco {
 	font-size: 22px;
 	font-weight: bold;
 	margin-top: 10px;
@@ -143,7 +142,7 @@ table {
 	margin: 20px 0 40px;
 }
 
-thead{
+thead {
 	background: #555555;
 	color: white;
 	font-weight: bold;
@@ -171,6 +170,8 @@ td, th {
 	background: #FEFEFE;
 	width: 940px;
 	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .principal p {
@@ -194,6 +195,8 @@ td, th {
 .mapa {
 	padding: 3em 0;
 	background: linear-gradient(#FEFEFE, #888888);
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .mapa-conteudo {
@@ -209,6 +212,8 @@ td, th {
 .beneficios {
 	padding: 3em 0;
 	background: #888888;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .conteudo-beneficios {
@@ -238,7 +243,7 @@ td, th {
 	width: 60%;
 	opacity: 1;
 	transition: 400ms;
-	box-shadow: 10px 10px 10px #000000 ;
+	box-shadow: 10px 10px 10px #000000;
 }
 
 .imangen-benfecios:hover {
@@ -250,9 +255,14 @@ td, th {
 	margin: 2em auto;
 }
 
-@media screen and (max-width: 480px) {
-	.caixa , .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos, .produtos li {
+@media screen and (max-width: 768px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos, .produtos li {
 		width: auto;
+	}
+
+	.caixa {
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	h1 {
@@ -270,8 +280,18 @@ td, th {
 	.produtos li {
 		display: block;
 		padding: 30px 50px;
-		margin:0 20px 6px 20px ;
+		margin: 0 20px 6px 20px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.principal {
+		width: 100%;
+		padding: 0;
 	}
 
+	.mapa-conteudo {
+		width: 100%;
+	}
 
 }
